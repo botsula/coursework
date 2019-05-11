@@ -1,6 +1,48 @@
+class myTaskCreate:
+    def __init__(self, word_title, notes, due, ttype, delta_days, fin_money, static_money, ):
+        self.word_title = word_title
+        self.notes = notes
+        self.due = due
+        self.ttype = ttype
+        self.fin_money = fin_money
+        self.static_money = static_money
+        self.delta_days = delta_days
 
-class myDataType:
+class myAddTask:
+    def __init__(self, task_dict):
+        self.real_task = task_dict
+        self.title = task_dict['title']
+        self.notes = task_dict['notes']
+        self.due = task_dict['due']
+        self.word_title = None
+
+class myTask:
+    def __init__(self, task_dict):
+        self.real_task = task_dict
+        self.title = task_dict['title']
+        self.updated = task_dict['updated']
+        self.status = task_dict['status']
+        self.notes = task_dict['notes']
+        self.due = task_dict['due']
+        self.id = task_dict['id']
+        self.type = None
+        self.success = None
+        self.static_money = None
+        self.money = None # [now/need]
+        self.money_today = None
+
+    def __str__(self):
+        return 'Title: {}\n'.format(self.title) + \
+               'Notes: {}\n'.format(self.notes) + \
+               'Due: {}\n'.format(self.due) + \
+               'Status: {}\n'.format(self.status) + \
+               'Updated: {}\n'.format(self.updated) + \
+               'ID: {}'.format(self.id)
+
+
+class myTaskList:
     '''Creating my abstract method.'''
+
     def __init__(self, lst):
         '''Initialize my data type.'''
         self.data = lst
