@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remindozaur - Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</head>
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand ml-4" href="/remindozaur">
+            <b>Remindozaur</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">
+                        <button type="button" class="btn btn-info">New Task +</button>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mt-2"
+                       href="/my_tasks">My tasks</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link mt-2"
+                       href="/help">Help
+                        <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <form class="text mt-2 mt-md-0 mr-3 text-white">
+                <b>@remindozaur.test</b>
+            </form>
+        </div>
+    </nav>
+</header>
+<body>
+<div class="container w-50 justify-content-center pt-5 mt-5">
+    <h3 class="mt-5">What can you do with this app?</h3>
+    <p>You can create deadline-tasks of two types: usual (when you have to complete something due special date) and
+        money (when you need to keep some money amount due some date).<br>This app will make new task in a "Remindozaur"
+        task list on yours Google Tasks. And the main feature is that is is going to <b>update every day</b> so
+        you will be able to see <b>how many days</b> before deadline and <b>how much money</b> you need to keep every
+        day.</p>
+    <h3 class="mt-5">How to use it?</h3>
+    <p>If you 'complete' task once a day in your Google Tasks, that means that you made the <b>daily dose</b> of this
+        task.
+        If you did not, in case of 'money' type of task, the next day you would have to keep <b>double dose</b> of
+        money.
+        All information is showed in tasks <b>notes</b>.</p>
+    <h3 class="mt-5">How to delete deadline?</h3>
+    <p>If you want to delete the deadline, you just need to <b>delete</b> it from your list in Google Tasks <b>instead
+        of 'complete'</b> it.</p>
+</div>
+<div>
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2019 Remindozaur</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.3/examples/checkout/?#">Privacy</a>
+            </li>
+            <li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.3/examples/checkout/?#">Terms</a></li>
+            <li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.3/examples/checkout/?#">Support</a>
+            </li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remindozaur - New Task</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</head>
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand ml-4" href="/remindozaur">
+            <b>Remindozaur</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">
+                        <button type="button" class="btn btn-info">New Task +</button>
+                        <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mt-2"
+                       href="/my_tasks">My tasks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mt-2"
+                       href="/help">Help</a>
+                </li>
+            </ul>
+            <form class="text mt-2 mt-md-0 mr-3 text-white">
+                <b>@remindozaur.test</b>
+            </form>
+        </div>
+    </nav>
+</header>
+<body class="bg-light mt-5">
+<div class="container w-50 justify-content-center pt-5">
+    <div class="text-center">
+        <img class="d-block mx-auto mb-2" src="/static/stegosaurus.svg" alt=""
+             width="100" height="100">
+        <h2>Create New Task</h2>
+        <p class="lead w-100">Here you can create a new task with <b>usual</b> or <b>money</b> deadline.</p>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="w-25 col-md-8 order-md-1">
+            <form class="needs-validation" action="/submit_form" method="post">
+                <div class="mb-3">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="The name of task."
+                           value=""
+                           required="">
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="notes">Notes:</label>
+                    <input type="text" class="form-control" id="notes" name="notes"
+                           placeholder="Some information about your task.">
+                    <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="date">Date:</label>
+                    <input type="date" class="form-control" id="date" name="date" placeholder="yyyy-mm-dd">
+                    <div class="invalid-feedback">
+                        Please enter your shipping address.
+                    </div>
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Deadline Type</label>
+                    </div>
+                    <select class="custom-select" name="custom-select" id="inputGroupSelect01" onchange="money_choose()">
+                        <option value="1">Usual</option>
+                        <option value="2">Money</option>
+                    </select>
+                </div>
+                <script>
+                    function money_choose () {
+                        let custom_select = document.getElementById("inputGroupSelect01").value;
+                        let money = document.getElementById("money");
+                        if (custom_select === "2") {
+                            money.removeAttribute("disabled");
+                        }
+                        else {
+                            money.setAttribute("disabled", "disabled");
+                        }
+                    }
+
+                </script>
+
+                <div class="mb-3">
+                    <label for="money">Money amount:</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" class="form-control" name="money" id="money" placeholder="0" disabled="disabled">
+                        <div class="invalid-feedback" style="width: 100%;">
+                            Your username is required.
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="mb-3 mt-3">
+
+                <button type="submit" class="btn btn-outline-info w-100">Create new task!</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2019 Remindozaur</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.3/examples/checkout/?#">Privacy</a>
+            </li>
+            <li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.3/examples/checkout/?#">Terms</a></li>
+            <li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.3/examples/checkout/?#">Support</a>
+            </li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>

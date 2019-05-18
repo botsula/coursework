@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remindozaur - Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</head>
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand ml-4" href="/remindozaur">
+            <b>Remindozaur</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">
+                        <button type="button" class="btn btn-info">New Task +</button>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mt-2"
+                       href="/my_tasks">My tasks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mt-2"
+                       href="/help">Help</a>
+                </li>
+            </ul>
+            <form class="text mt-2 mt-md-0 mr-3 text-white">
+                <b>@remindozaur.test</b>
+            </form>
+        </div>
+    </nav>
+</header>
+<body class="bg-dark mt-5">
+<div class="container w-50 justify-content-center pt-5">
+    <div class="text-center mt-5">
+        <img class="d-block mx-auto mb-2" src="/static/tyrannosaurus-rex.svg" alt=""
+             width="150" height="150">
+        <div class="text-white"><h1>Remindozaur</h1></div>
+        <p class="lead w-100 text-white"><b>Burn your deadlines on time!</b></p>
+        <hr class="border-white w-25 mt-2">
+        <div class="text-center text-light">Welcome to the <b>Remindozaur</b> app.
+            It allows you to create <b>money</b> and <b>usual</b>
+            deadlines synchronizing with your <b>Google Tasks</b>.
+            Read <a class="link" href="/help">Help</a> to find more information.
+        </div>
+    </div>
+    <a class="nav-link" href="/">
+    <button type="button" class="btn btn-info btn-lg btn-block w-50 mx-auto mt-3">Quick Start!</button></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remindozaur - My Tasks</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</head>
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand ml-4" href="/remindozaur">
+            <b>Remindozaur</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">
+                        <button type="button" class="btn btn-info">New Task +</button>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link mt-2"
+                       href="/my_tasks">My tasks
+                        <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mt-2"
+                       href="/help">Help</a>
+                </li>
+            </ul>
+            <form class="text mt-2 mt-md-0 mr-3 text-white">
+                <b>@remindozaur.test</b>
+            </form>
+        </div>
+    </nav>
+</header>
+<body class="bg-light mt-5">
+<div class="container w-50 justify-content-center pt-5">
+    <div class="text-center mt-3">
+        <h2 class="pt-2"><img class="mr-3 mb-3" src="/static/styracosaurus.svg" alt="" width="60" height="60">My Tasks
+        </h2></div>
+    <div class="row">
+        {% for task in all_tasks %}
+            <div class="col-sm-4 mt-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ task[0] }}</h5>
+                        <p class="card-text">{{ task[1] }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<div>
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2019 Remindozaur</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.3/examples/checkout/?#">Privacy</a>
+            </li>
+            <li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.3/examples/checkout/?#">Terms</a></li>
+            <li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.3/examples/checkout/?#">Support</a>
+            </li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>
