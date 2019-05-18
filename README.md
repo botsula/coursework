@@ -14,6 +14,6 @@ login: remindozaur.test@gmail.com
 
 password: Remindozaur_2019
 
-Програма працює на локальному хості, тому варто запускати її з ./modules/remindozaur/. 
+Програма працює на локальному хості, тому варто запускати її з ./modules/remindozaur/ (https://github.com/botsula/coursework/tree/master/modules/remindozaur)
 
 Документація: https://github.com/botsula/coursework/tree/master/modules/remindozaur/documentation/_build/html/rst
