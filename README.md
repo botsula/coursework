@@ -7,6 +7,7 @@
 
 Аплікація дозволятиме створювати дедлайни, редагувати їх та видаляти. Такий метод постійного нагадування, на мою думку, є достатньо ефективним і мета моєї розробки це перевірити.
 
+--------
 
 Важливо! Для використання демо версії Remindozaur необхідно авторизуватись під конкретним обліковим записом:
 
@@ -14,6 +15,6 @@ login: remindozaur.test@gmail.com
 
 password: Remindozaur_2019
 
-Програма працює на локальному хості, тому варто запускати її з ./modules/remindozaur/ (https://github.com/botsula/coursework/tree/master/modules/remindozaur)
+Програма працює на локальному хості, тому варто запускати її з [https://github.com/botsula/coursework/tree/master/modules/remindozaur /master/modules/remindozaur]
 
-Документація: https://github.com/botsula/coursework/tree/master/modules/remindozaur/documentation/_build/html/rst
+Документація: [https://github.com/botsula/coursework/tree/master/modules/remindozaur/documentation/_build/html/rst]
