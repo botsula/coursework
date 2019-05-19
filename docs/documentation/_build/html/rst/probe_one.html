@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>probe_one module &#8212; Remindozaur 1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-probe_one">
+<span id="probe-one-module"></span><h1>probe_one module<a class="headerlink" href="#module-probe_one" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="probe_one.Remindozaur">
+<em class="property">class </em><code class="descclassname">probe_one.</code><code class="descname">Remindozaur</code><a class="headerlink" href="#probe_one.Remindozaur" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for Remindozaur app.</p>
+<dl class="method">
+<dt id="probe_one.Remindozaur.add_task">
+<code class="descname">add_task</code><span class="sig-paren">(</span><em>add_task_adt</em>, <em>rz_list_id</em><span class="sig-paren">)</span><a class="headerlink" href="#probe_one.Remindozaur.add_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add task to user`s Google Account.
+:param add_task_adt: task of myAddTask() type
+:param rz_list_id: ID of ‘Remindozaur’ list in user`s account
+:return: bool</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="probe_one.Remindozaur.find_all_tasks">
+<code class="descname">find_all_tasks</code><span class="sig-paren">(</span><em>rz_list_id</em><span class="sig-paren">)</span><a class="headerlink" href="#probe_one.Remindozaur.find_all_tasks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of [title, notes] all user`s active and completed tasks from Google Tasks.
+:param rz_list_id: ID of ‘Remindozaur’ list in user`s account, str
+:return: list of [title, notes], lst(str, str)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="probe_one.Remindozaur.find_list">
+<code class="descname">find_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#probe_one.Remindozaur.find_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find list ‘Remindozaur’ in user`s account and returns its ID. If list is missing, than function creates it.
+:return: str, ID of ‘Remindozaur’ list</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="probe_one.Remindozaur.finish_task_upload">
+<code class="descname">finish_task_upload</code><span class="sig-paren">(</span><em>task_adt</em>, <em>rz_list_id</em><span class="sig-paren">)</span><a class="headerlink" href="#probe_one.Remindozaur.finish_task_upload" title="Permalink to this definition">¶</a></dt>
+<dd><p>When task was updated after 1 day left, this function uploads the final greetings task with congratulations.
+:param task_adt: task of myTask() type
+:param rz_list_id: ID of ‘Remindozaur’ list in user`s account
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="probe_one.Remindozaur.fire_task_up">
+<code class="descname">fire_task_up</code><span class="sig-paren">(</span><em>task</em>, <em>rz_list_id</em>, <em>a</em>, <em>b</em>, <em>new_num</em><span class="sig-paren">)</span><a class="headerlink" href="#probe_one.Remindozaur.fire_task_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update ‘usual’ type deadline/task and upload it to user`s account.
+:param task: task of myTask() type
+:param rz_list_id: ID of ‘Remindozaur’ list in user`s account
+:param a: first flag for parsing title, int
+:param b: second flag for parsing title, int
+:param new_num: updated number of days till deadline
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="probe_one.Remindozaur.main">
+<code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#probe_one.Remindozaur.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>The main function built for using Remindozaur app with console.
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="probe_one.Remindozaur.money_task_up">
+<code class="descname">money_task_up</code><span class="sig-paren">(</span><em>task</em>, <em>rz_list_id</em>, <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em>, <em>new_num</em><span class="sig-paren">)</span><a class="headerlink" href="#probe_one.Remindozaur.money_task_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update ‘money’ type deadline/task and upload it to user`s account.
+:param task: task of myTask() type
+:param rz_list_id: ID of ‘Remindozaur’ list in user`s account
+:param a: first flag for parsing title, int
+:param b: second flag for parsing title, int
+:param c: first flag for parsing money, int
+:param d: second flag for parsing money, int
+:param new_num: updated number of days till deadline
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="probe_one.Remindozaur.task_creation">
+<code class="descname">task_creation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#probe_one.Remindozaur.task_creation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for console program usage.
+Create new task from user`s input and return the task dictionary of Google Tasks format.
+:param title: the name of task, str
+:param notes: some information about task, str
+:param due: due date in format yyyy-mm-dd, str
+:param money: money amount (e.q. ‘1000’) or ‘0’, str
+:return: dictionary of Google Tasks format for task</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="probe_one.Remindozaur.task_creation_web">
+<code class="descname">task_creation_web</code><span class="sig-paren">(</span><em>title</em>, <em>notes</em>, <em>due</em>, <em>money</em><span class="sig-paren">)</span><a class="headerlink" href="#probe_one.Remindozaur.task_creation_web" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create new task from web-app user`s input and return the task dictionary of Google Tasks format.
+:param title: the name of task, str
+:param notes: some information about task, str
+:param due: due date in format yyyy-mm-dd, str
+:param money: money amount (e.q. ‘1000’) or ‘0’, str
+:return: dictionary of Google Tasks format for task</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="probe_one.Remindozaur.update_task">
+<code class="descname">update_task</code><span class="sig-paren">(</span><em>one_word_name</em>, <em>rz_list_id</em><span class="sig-paren">)</span><a class="headerlink" href="#probe_one.Remindozaur.update_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update all ‘Remindozaur’ tasks:
+- check if deadline was completed or not, and based on it process its parameters
+- change the days till deadline
+- change the amount per day for money deadlines
+- update information in notes for user to see which amount is already gathered
+- if 0 days till deadline, raise finish_task_upload() function
+:param one_word_name: task title made by user, str
+:param rz_list_id: ID of ‘Remindozaur’ list in user`s account
+:return: None</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Remindozaur</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Anna Botsula.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/rst/probe_one.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
